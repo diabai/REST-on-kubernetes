@@ -1,0 +1,27 @@
+{
+  "name": "com.diabai.rest.kubernetes",
+  "version": "1.0.0",
+  "description": "A REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diabai/REST-on-kubernetes.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "4.17.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0"
+  },
+  "author": "Ibrahim Diabate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diabai/REST-on-kubernetes/issues"
+  },
+  "homepage": "https://github.com/diabai/REST-on-kubernetes#readme"
+}
