@@ -2,19 +2,16 @@ const express =require('express');
 const cors =require('cors');
 const mysql =require('mysql');
 const morgan = require('morgan');
+const fs = require('fs');
+
 const APP_PORT = 4000;
-
 const app = express();
-
 var table = 'movies';
 
-var db_config = {
-	host: '127.0.0.1',
-	user: 'root',
-	password: 'champion7',
-	database: 'ognas'
-};
-const connection = mysql.createConnection(db_config);
+let rawdata = fs.readFileSync('credentials.json');
+let db_credentials = JSON.parse(rawdata);
+
+const connection = mysql.createConnection(db_credentials);
 connection.connect(function(err) {
 	if(err) {
 		return console.log('error while connecting: ' + err.message);
