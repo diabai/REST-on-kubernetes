@@ -1,7 +1,6 @@
 # REST-on-kubernetes
 Basic application that performs CRUD operations. The goal of this project is to create a Docker image from this basic application. The docker image, hosted on DockerHub will then be deployed in a local Kubernetes cluster.
 
-### Endpoints:
 
 HTTP method | Endpoint
 ------------ | -------------
