@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  name: rest-on-kubernetes-deployment
+spec: 
+  replicas: 3
+  selector: 
+    matchLabels: 
+      app: rest-on-kubernetes
+  template: 
+    metadata: 
+      labels: 
+        app: rest-on-kubernetes
+    spec: 
+      containers: 
+        - name: rest-on-kubernetes-container
+          image: diabai/rest-on-kubernetes
+          ports: 
+            - name: rok-port
+              containerPort: 4000
+              
+
